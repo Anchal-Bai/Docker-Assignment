@@ -1,0 +1,9 @@
+I chose to build a Task Manager application using Node.js and MySQL because it reflects a common real-world use case while being simple enough to demonstrate the core concepts of Docker. My goal was to build a microservices-based application that clearly separates the backend and database layers, allowing me to learn how Docker containers communicate and how networking, volumes, and image management work in practice.
+
+One challenge I faced was getting the Node.js backend to reliably connect to the MySQL database, especially since both run in isolated containers. Learning to use Docker’s custom bridge network solved that issue, and setting up environment variables for secure database access was another important step. I also learned how to persist database data using Docker volumes.
+
+Docker made my development process much easier by allowing me to containerize each component. This ensured a consistent runtime environment and avoided the usual "it works on my machine" problems. Using manual Docker commands (without Docker Compose) helped me understand each container's lifecycle and how containers interact.
+
+As a creative enhancement, I added a second container running the web service to simulate load balancing across multiple instances. In a production setup, I would expand this using Nginx as a reverse proxy, add user authentication, and implement proper error handling and monitoring.
+
+Overall, this assignment gave me a strong practical foundation in Docker and container-based development.
